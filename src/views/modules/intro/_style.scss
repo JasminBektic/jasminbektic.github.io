@@ -1,0 +1,327 @@
+/*
+######################
+    Colors
+######################
+*/
+$intro-bg:              rgb(0, 0, 0);
+$intro:                 #fff;
+$profile-img-border:    #fff;
+$intro-title-init:      #fff;
+$intro-title:           #ff8f00;
+$resume-btn:            #fff;
+$resume-btn-border:     #fff;
+$download-icon:         #fff;
+$download-icon-bg:      #ff6c00;
+$typewriter:            #ff9817;
+$scroll-down-btn:       #fff;
+
+
+/*
+######################
+    Variables
+######################
+*/
+$profile-img-size:      350px;
+$profile-border-size:   3px;
+$info-title-size:       font-size(16px, '+');
+$info-desc-size:        font-size(2px, '-');
+
+
+/*
+######################
+    Animations
+######################
+*/
+@mixin border-rotation() {
+    box-sizing: border-box;
+    position: relative;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100.04%;
+        height: 100%;
+        border-radius: 100%;
+        top: 0;
+        left: 0;
+        border: $profile-border-size solid transparent;
+    }
+    &--border {
+        &:before {
+            border-top-color: $profile-img-border;
+            border-right-color: $profile-img-border;
+            border-bottom-color: $profile-img-border;
+            transition:
+                border-top-color 0.15s ease,
+                border-right-color 0.15s ease 0.10s,
+                border-bottom-color 0.15s ease 0.20s;
+        }
+        &:after {
+            border-top: $profile-border-size solid $profile-img-border;
+            border-left-width: $profile-border-size;
+            border-right-width: $profile-border-size;
+            transform: rotate(270deg);
+            transition:
+                transform 0.7s ease 0s,
+                border-left-width 0s ease 0.35s;
+        }
+    }  
+}
+
+@mixin fade-in($x, $y, $duration: 5s) {
+    transform: translate($x, $y);
+    animation-duration: $duration;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+}
+
+@mixin typewriter {
+    overflow: hidden;
+    border-right: .15em solid $typewriter;
+    border-color: transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 0;
+    animation: 
+        typing 2s steps(40, end) 4s forwards,
+        blink-caret .75s step-end 4s infinite;
+
+    @keyframes typing {
+        from { 
+            width: 0;
+        }
+        to { 
+            width: 100%;
+        }
+    }
+
+    @keyframes blink-caret {
+        from, to { 
+            border-color: transparent;
+        }
+        50% { 
+            border-color: $typewriter;
+        }
+    }
+}
+
+@mixin resume-btn-border {
+    animation: appear 2s ease 5s forwards;
+
+    @keyframes appear {
+        from { 
+            border: 2px solid transparent;
+        }
+        to { 
+            border: 2px solid $resume-btn-border;
+        }
+    }
+}
+
+@mixin title-change-color {
+    animation: change 4s ease 4s forwards;
+
+    @keyframes change {
+        from { 
+            color: $intro-title-init;
+        }
+        to { 
+            color: $intro-title;
+        }
+    }
+}
+
+
+/*
+######################
+    Buttons
+######################
+*/
+@mixin resume-btn() {
+    overflow: hidden;
+    background: transparent;
+    padding: 4px 0;
+    position: relative;
+    width: 170px;
+    display: block;
+    height: 30px;
+    border: 2px solid transparent;
+    &:hover span:nth-child(2) {
+        top: 0;
+    }
+    & span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .15s ease-in-out;
+    }
+    & span:nth-child(2) {
+        top: -100%;
+        background: $download-icon-bg;
+        color: $download-icon;
+        font-size: 20px;
+        opacity: .95;
+    }
+}
+
+@mixin scroll-down-btn {
+    & a span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        margin-left: -15px;
+        border: 2px solid $scroll-down-btn;
+        border-radius: 50px;
+        box-sizing: border-box;
+        &::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: $scroll-down-btn;
+            border-radius: 100%;
+            animation: wheel 2s infinite;
+            box-sizing: border-box;
+        }
+    }
+    @keyframes wheel {
+        0% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+        40% {
+            opacity: 1;
+        }
+        80% {
+            transform: translate(0, 20px);
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+
+/*
+######################
+    Style
+######################
+*/
+.parallax-slider {
+    filter: blur(4px);
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.introItem {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    &Parallax {
+        background: rgba($intro-bg, .49);
+    }
+    &__profile {    
+        @extend .introItem;
+        @include fade-in(-150px, 150px, 3s);
+    }
+    &__profileImage {
+        height: $profile-img-size;
+        width: $profile-img-size;
+        overflow: hidden;
+        border-radius: 50%;
+        @include border-rotation;
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        @extend .introItem;
+        color: $intro;
+        flex-direction: column;
+        padding-right: 70px;
+        text-align: center;
+        @include fade-in(150px, -150px, 4s);
+    }
+    &__infoTitle {
+        font-size: $info-title-size;
+        font-family: $font-main-bold;
+        letter-spacing: 1px;
+        @include title-change-color;
+    }
+    &__infoTitleDescription {
+        font-size: $info-desc-size;
+        & span {
+            display: block;
+            @include typewriter;
+        }
+    }
+    &__infoSummary {
+        margin-top: 30px;
+        padding-top: 8px;
+        border-top: 1px solid;
+    }
+    &__infoResume {
+        margin-top: 20px;
+        & a {
+            color: $resume-btn;
+            font-weight: 700;
+            letter-spacing: 2px;
+            @include resume-btn;
+            @include resume-btn-border;
+        }
+    }
+    &__scrollDownButton {
+        position: absolute;
+        bottom: 70px;
+        z-index: 100;
+        transition: .3s ease-in-out;
+        opacity: 0;
+        @include scroll-down-btn;
+        &--visibleOnInit {
+            transition-delay: 5s;
+            opacity: 1;
+        }
+        &--visibleOnScroll {
+            opacity: 1;
+        }
+    }
+}

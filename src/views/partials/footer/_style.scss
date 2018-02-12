@@ -1,0 +1,52 @@
+/*
+######################
+    Colors
+######################
+*/
+$footer-bg:                 #252a30;
+$footer-social-icon:        #fff;
+$footer-icon-hover:         #333;
+$footer-icon-hover-bg:      #fff;
+
+
+/*
+######################
+    Variables
+######################
+*/
+$social-icon-size:          40px;
+
+
+/*
+######################
+    Style
+######################
+*/
+.footer {
+    background: $footer-bg;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__socialIcons {
+        display: inline-flex;
+        & li {
+            margin: 0 5px;
+            &:hover i {
+                transform: rotate(360deg);
+                background: $footer-icon-hover-bg !important;
+                color: $footer-icon-hover;
+            }
+            & i {
+                color: $footer-social-icon;
+                height: $social-icon-size;
+                width: $social-icon-size;
+                border-radius: 50%;
+                font-size: font-size(6px, '+');
+                text-align: center;
+                line-height: $social-icon-size;
+                transition: .25s ease-in-out;
+            }
+        }
+    }
+}

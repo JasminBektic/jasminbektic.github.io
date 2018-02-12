@@ -1,0 +1,80 @@
+/*
+######################
+    Colors
+######################
+*/
+$header-bg:             rgb(255, 255, 255);
+$header-color:          #333;
+$header-shadow:         #bababa;
+$header-li-hover:       #0c0c17;
+
+
+/*
+######################
+    Variables
+######################
+*/
+$header-height:         50px;
+
+
+/*
+######################
+    Style
+######################
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 130px;
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    color: $header-color;
+    background: rgba($header-bg, .95);
+    box-shadow: 0 5px 6px -5px $header-shadow;
+    transition: 200ms ease-in-out;
+    z-index: 0;
+    opacity: 0;
+    &--active {
+        opacity: 1;
+        z-index: 50;
+    }
+    &__logo {
+        & img {
+            height: 35px;
+        }
+    }
+    &__navbar ul {
+        display: inline-flex;
+        & li {
+            line-height: calc(#{$header-height} - 20px);
+            cursor: pointer;
+            padding: 0 16px;
+            overflow: hidden;
+            &:last-child {
+                padding-right: 0;
+            }
+            &:hover {
+                & span {
+                    transform: translate3d(0, -100%, 0);
+                }
+            }
+            & span {
+                position: relative;
+                display: inline-block;
+                transition: transform .4s;
+                &:before {
+                    position: absolute;
+                    top: 100%;
+                    font-weight: 700;
+                    color: $header-li-hover;
+                    content: attr(data-hover);
+                    transform: translate3d(0, 0, 0);
+                    transition: color .4s;
+                }
+            }
+        }
+    }
+}

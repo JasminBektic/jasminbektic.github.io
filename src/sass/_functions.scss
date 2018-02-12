@@ -1,0 +1,5 @@
+@function font-size($value, $operator) {
+    // @warn "Size \"" + $value + "\" is not defined";
+    // @warn "Operator \"" + $operator + "\" is not defined";
+    @return calc(#{$font-size-base} #{$operator} #{$value});
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Skill Set",
+    "skills_desc": "List of skills",
+    "grid": [
+        {
+            "background": "assets/images/skills/html.svg",
+            "title": "HTML",
+            "title_bg": "#E34F26"
+        },
+        {
+            "background": "assets/images/skills/css.svg",
+            "title": "CSS",
+            "title_bg": "#0A71B9"
+        },
+        {
+            "background": "assets/images/skills/javascript.svg",
+            "title": "JavaScript",
+            "title_bg": "#D5BA33"
+        },
+        {
+            "background": "assets/images/skills/jquery.svg",
+            "title": "jQuery",
+            "title_bg": "#4082AE"
+        },
+        {
+            "background": "assets/images/skills/angular.svg",
+            "title": "AngularJS",
+            "title_bg": "#E23237"
+        },
+        {
+            "background": "assets/images/skills/sass.svg",
+            "title": "Sass",
+            "title_bg": "#CF649A"
+        },
+        {
+            "background": "assets/images/skills/php.svg",
+            "title": "PHP",
+            "title_bg": "#8993BE"
+        },
+        {
+            "background": "assets/images/skills/laravel.svg",
+            "title": "Laravel",
+            "title_bg": "#FB503B"
+        },
+        {
+            "background": "assets/images/skills/wordpress.svg",
+            "title": "Wordpress",
+            "title_bg": "#464442"
+        },
+        {
+            "background": "assets/images/skills/java.svg",
+            "title": "Java",
+            "title_bg": "#5382A1"
+        },
+        {
+            "background": "assets/images/skills/git.svg",
+            "title": "Git",
+            "title_bg": "#F05133"
+        },
+        {
+            "background": "assets/images/skills/mysql.svg",
+            "title": "MySQL",
+            "title_bg": "#008CDB"
+        },
+        {
+            "background": "assets/images/skills/bem.svg",
+            "title": "BEM",
+            "title_bg": "#010101"
+        },
+        {
+            "background": "assets/images/skills/bootstrap.svg",
+            "title": "Bootstrap",
+            "title_bg": "#563D7C"
+        },
+        {
+            "background": "assets/images/skills/bash.svg",
+            "title": "Bash",
+            "title_bg": "#3E474A"
+        },
+        {
+            "background": "assets/images/skills/gulp.svg",
+            "title": "Gulp",
+            "title_bg": "#E94B4C"
+        }
+    ]
+}

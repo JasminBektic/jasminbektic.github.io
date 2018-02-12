@@ -1,0 +1,16 @@
+/***  Globals  ***/
+@import "reset";
+@import "variables";
+@import "typography";
+@import "global";
+@import "scrollbar";
+@import "functions";
+
+/***  Partials  ***/
+@import "../views/partials/header/style";
+@import "../views/partials/footer/style";
+
+/***  Modules  ***/
+@import "../views/modules/intro/style";
+@import "../views/modules/skills/style";
+@import "../views/modules/projects/style";

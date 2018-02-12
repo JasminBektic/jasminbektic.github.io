@@ -1,0 +1,46 @@
+{
+    "title": "Code Laboratory",
+    "projects_desc": "Everything accomplished in free time.",
+    "grid": [
+        {
+            "title": "Example_01",
+            "url": "https://github.com/JasminBektic",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/angular.png",
+            "tags": [
+                "AngularJS",
+                "JSON",
+                "Jquery"
+            ],
+            "button": "more..."
+        },
+        {
+            "title": "Example_02",
+            "url": "https://github.com/JasminBektic",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/angular.png",
+            "tags": [
+                "Laravel",
+                "PHP",
+                "Jquery",
+                "Sass",
+                "Javascript",
+                "Blade"
+            ],
+            "button": "more..."
+        },
+        {
+            "title": "Example_03",
+            "url": "https://github.com/JasminBektic",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/angular.png",
+            "tags": [
+                "Jquery",
+                "Sass",
+                "Javascript",
+                "BEM"
+            ],
+            "button": "more..."
+        }
+    ]
+}

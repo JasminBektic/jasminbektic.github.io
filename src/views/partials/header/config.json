@@ -1,0 +1,13 @@
+{
+    "logo": "assets/images/logo.svg",
+    "navbar_items": [
+        {
+            "title": "Work",
+            "module": "projects"
+        },
+        {
+            "title": "Skills",
+            "module": "skills"
+        }
+    ]
+}
