@@ -294,7 +294,7 @@ $info-desc-size:        font-size(2px, '-');
     }
     &__infoTitleDescription {
         font-size: $info-desc-size;
-        & span {
+        span {
             display: block;
             @include typewriter;
         }
@@ -306,12 +306,15 @@ $info-desc-size:        font-size(2px, '-');
     }
     &__infoResume {
         margin-top: 20px;
-        & a {
+        a {
             color: $resume-btn;
             font-weight: 700;
             letter-spacing: 2px;
             @include resume-btn;
             @include resume-btn-border;
+            span {
+                text-transform: uppercase;
+            }
         }
     }
     &__scrollDownButton {
