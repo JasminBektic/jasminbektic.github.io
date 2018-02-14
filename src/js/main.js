@@ -95,9 +95,11 @@ function _requestsFinished() {
     setTimeout(function () {
         $('.loader').addClass('loader--deactivate');  
         $('.intro__scrollDownButton').addClass('intro__scrollDownButton--visibleOnInit');
+        $('.intro__profile').addClass('intro__profile--active');
+        $('.intro__info').addClass('intro__info--active');
     }, 300);
     setTimeout(function () { 
         $('.intro__profileImage').addClass('intro__profileImage--border');  
-    }, 3100);
+    }, 2400);
 }
 

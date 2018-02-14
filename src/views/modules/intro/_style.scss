@@ -72,7 +72,7 @@ $info-desc-size:        font-size(2px, '-');
 @mixin fade-in($x, $y, $duration: 5s) {
     transform: translate($x, $y);
     animation-duration: $duration;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(.82, .01, .29, .98);
     animation-fill-mode: forwards;
     animation-name: fadeIn;
     
@@ -95,8 +95,8 @@ $info-desc-size:        font-size(2px, '-');
     margin: 0 auto;
     width: 0;
     animation: 
-        typing 2s steps(40, end) 4s forwards,
-        blink-caret .75s step-end 4s infinite;
+        typing 1.7s steps(40, end) 2.7s forwards,
+        blink-caret .75s step-end 2.7s infinite;
 
     @keyframes typing {
         from { 
@@ -118,7 +118,7 @@ $info-desc-size:        font-size(2px, '-');
 }
 
 @mixin resume-btn-border {
-    animation: appear 2s ease 5s forwards;
+    animation: appear 2s ease 3s forwards;
 
     @keyframes appear {
         from { 
@@ -131,7 +131,7 @@ $info-desc-size:        font-size(2px, '-');
 }
 
 @mixin title-change-color {
-    animation: change 4s ease 4s forwards;
+    animation: change 2.8s ease 3s forwards;
 
     @keyframes change {
         from { 
@@ -159,7 +159,7 @@ $info-desc-size:        font-size(2px, '-');
     height: 30px;
     border: 2px solid transparent;
     &:hover span:nth-child(2) {
-        top: 0;
+        opacity: .95;
     }
     & span {
         position: absolute;
@@ -173,11 +173,11 @@ $info-desc-size:        font-size(2px, '-');
         transition: .15s ease-in-out;
     }
     & span:nth-child(2) {
-        top: -100%;
+        top: 0;
         background: $download-icon-bg;
         color: $download-icon;
         font-size: 20px;
-        opacity: .95;
+        opacity: 0;
     }
 }
 
@@ -248,6 +248,7 @@ $info-desc-size:        font-size(2px, '-');
     z-index: 10;
     box-sizing: border-box;
     padding: 0 2%;
+    opacity: 0;
 }
 
 .intro {
@@ -259,7 +260,9 @@ $info-desc-size:        font-size(2px, '-');
     }
     &__profile {    
         @extend .introItem;
-        @include fade-in(-150px, 150px, 3s);
+        &--active {
+            @include fade-in(-150px, 150px, 1.7s);
+        }
     }
     &__profileImage {
         height: $profile-img-size;
@@ -279,7 +282,9 @@ $info-desc-size:        font-size(2px, '-');
         flex-direction: column;
         padding-right: 70px;
         text-align: center;
-        @include fade-in(150px, -150px, 4s);
+        &--active {
+            @include fade-in(150px, -150px, 2.5s);
+        }
     }
     &__infoTitle {
         font-size: $info-title-size;
@@ -317,7 +322,7 @@ $info-desc-size:        font-size(2px, '-');
         opacity: 0;
         @include scroll-down-btn;
         &--visibleOnInit {
-            transition-delay: 5s;
+            transition-delay: 3.1s;
             opacity: 1;
         }
         &--visibleOnScroll {
