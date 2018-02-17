@@ -1,12 +1,13 @@
 var modules = '',
     module_prefix = 'module_',
     defined_modules = [
-        'intro',
-        'projects',
-        'skills'
+        // 'intro',
+        // 'projects',
+        // 'skills',
+        'contact'
     ],
     defined_partials = [
-        'header',
+        // 'header',
         'footer'
     ];
 
@@ -14,7 +15,7 @@ const MODULE_ROOT = 'src/views/modules/',
       PARTIAL_ROOT = 'src/views/partials/',
       SCRIPT = '/script.js',
       HTML = '/structure.html',
-      JSON = '/config.json';
+      JSON_CONFIG = '/config.json';
 
 
 _init();
@@ -48,7 +49,7 @@ function _generateModules() {
             if (xhr.status == 200) {
                 $.getScript(MODULE_ROOT + module_name + SCRIPT)
                     .done(() => {
-                        createModuleStructure(MODULE_ROOT + module_name + JSON);
+                        createModuleStructure(MODULE_ROOT + module_name + JSON_CONFIG);
                     });
             }
         });
@@ -64,7 +65,7 @@ function _generatePartials() {
             if (xhr.status == 200) {
                 $.getScript(PARTIAL_ROOT + partial_name + SCRIPT)
                     .done(() => {
-                        createPartialStructure(PARTIAL_ROOT + partial_name + JSON);
+                        createPartialStructure(PARTIAL_ROOT + partial_name + JSON_CONFIG);
                     });
             }
         });
@@ -102,4 +103,3 @@ function _requestsFinished() {
         $('.intro__profileImage').addClass('intro__profileImage--border');  
     }, 2400);
 }
-
