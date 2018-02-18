@@ -1,3 +1,30 @@
 {
-    
+    "title": "Title contact form",
+    "desc": "Some text describing somethng, obviously",
+    "button": "Contact",
+    "form_action": "https://script.google.com/macros/s/AKfycbwZPL6ylly7c0pIh0gryIl8Jc4WbjcsM-rUB7wdSFocHwRlfs5U/exec",
+    "form_title": "Please fill this form and i will reply as soon as possible",
+    "submit_btn": "Send",
+    "fields": [
+        {
+            "label": "Name:",
+            "name": "name",
+            "type": "input"
+        },
+        {
+            "label": "Email:",
+            "name": "email",
+            "type": "input"
+        },
+        {
+            "label": "Subject:",
+            "name": "subject",
+            "type": "input"
+        },
+        {
+            "label": "Message:",
+            "name": "message",
+            "type": "textarea"
+        }
+    ]
 }

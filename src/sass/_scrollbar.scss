@@ -1,3 +1,9 @@
+.scrollbar {
+	&--disable {
+		overflow: hidden;
+	}
+}
+
 ::-webkit-scrollbar-track {
 	background-color: $scrollbar-track;
 }

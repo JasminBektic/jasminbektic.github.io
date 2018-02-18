@@ -1,13 +1,13 @@
 var modules = '',
     module_prefix = 'module_',
     defined_modules = [
-        // 'intro',
-        // 'projects',
-        // 'skills',
+        'intro',
+        'projects',
+        'skills',
         'contact'
     ],
     defined_partials = [
-        // 'header',
+        'header',
         'footer'
     ];
 
@@ -36,7 +36,7 @@ function _init() {
  */
 function _generateModulesString() {
     defined_modules.forEach((module_name) => {
-        modules += '<section id="' + module_prefix + module_name + '"></section>';
+        modules += '<section id="' + module_prefix + module_name + '" class="module-' + module_name + '"></section>';
     });
 }
 

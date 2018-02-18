@@ -44,11 +44,14 @@ $skills-heading:        #2b2b2b;
     Style
 ######################
 */
+.module-skills {
+    background: $skills-bg;
+}
+
 .skills {
     max-width: $max-content-width;
-    margin: $module-spacing auto 0;
-    background: $skills-bg;
-    padding: 40px $module-spacing;
+    padding: $module-spacing 0;
+    margin: 0 auto;
     &__title {
         text-align: center;
         margin-bottom: 50px;

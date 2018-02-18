@@ -170,7 +170,7 @@ $info-desc-size:        font-size(2px, '-');
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .15s ease-in-out;
+        transition: .15s ease;
     }
     & span:nth-child(2) {
         top: 0;
