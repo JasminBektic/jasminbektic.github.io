@@ -320,16 +320,18 @@ $info-desc-size:        font-size(2px, '-');
     &__scrollDownButton {
         position: absolute;
         bottom: 70px;
-        z-index: 100;
         transition: .3s ease-in-out;
         opacity: 0;
+        z-index: -10;
         @include scroll-down-btn;
         &--visibleOnInit {
             transition-delay: 3.1s;
             opacity: 1;
+            z-index: 100;
         }
         &--visibleOnScroll {
             opacity: 1;
+            z-index: 100;
         }
     }
 }

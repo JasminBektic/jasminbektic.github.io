@@ -7,22 +7,22 @@
     "submit_btn": "Send",
     "fields": [
         {
-            "label": "Name:",
+            "label": "Name *",
             "name": "name",
             "type": "input"
         },
         {
-            "label": "Email:",
+            "label": "Email *",
             "name": "email",
             "type": "input"
         },
         {
-            "label": "Subject:",
+            "label": "Subject *",
             "name": "subject",
             "type": "input"
         },
         {
-            "label": "Message:",
+            "label": "Message *",
             "name": "message",
             "type": "textarea"
         }

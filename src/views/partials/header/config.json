@@ -8,6 +8,10 @@
         {
             "title": "Skills",
             "module": "skills"
+        },
+        {
+            "title": "Contact",
+            "module": "contact"
         }
     ]
 }

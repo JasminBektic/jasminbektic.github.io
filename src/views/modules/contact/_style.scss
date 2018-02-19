@@ -3,14 +3,15 @@
     Colors
 ######################
 */
-$contact-bg:              #ffff3c;
+$contact-bg:              #ffd96b;
 $contact-heading:         #2b2b2b;
 $contact-close-btn:       #fff;
-$contact-form-block:      #333;
+$contact-form-block:      #252a30;
 $contact-input-border:    #fff;
 $contact-form:            #fff;
 $contact-section-btn:     #fff;
 $contact-section-btn-bg:  #ff4400;
+$contact-form-error:      #fd2828;
 
 
 /*
@@ -68,8 +69,15 @@ $contact-close-position:    50px;
     background: transparent;
     color: inherit;
     border-radius: 2px;
-    padding: 5px 12px;
-    font-size: inherit;
+    padding: 10px 16px;
+    min-width: 150px;
+    font-family: $font-secondary-semibold;
+    font-size: font-size(2px, '+');
+    transition: .15s ease-out;
+    &:hover {
+        background: $contact-form;
+        color: $contact-form-block;
+    }
 }
 
 .contact-section-btn {
@@ -126,12 +134,13 @@ $contact-close-position:    50px;
     font-family: inherit;
     &:placeholder-shown + label {
         transform-origin: left top;
-        transform: translate(10px, 0) scale(1.4);
+        transform: translate(10px, 0) scale(1.25);
         pointer-events: none;
     }
     &:focus + label,
     &:not(:placeholder-shown) + label {
         transform: translate(0, -25px) scale(1);
+        color: $contact-form;
     }
 }
 
@@ -182,8 +191,10 @@ $contact-close-position:    50px;
         }
     }
     &__formTitle {
-        font-size: font-size(6px, '+');
-        margin-bottom: 40px;
+        font-size: font-size(4px, '+');
+        margin-bottom: 50px;
+        font-family: $font-secondary-semibold;
+        text-align: center;
     }
     &__formItem {
         display: flex;
@@ -191,11 +202,18 @@ $contact-close-position:    50px;
         margin-bottom: 30px;
         width: 70%;
         max-width: 400px;
+        &--error {
+            input,
+            textarea {
+                border-color: $contact-form-error;
+            }
+        }
         label {
             transition: all .2s;
             position: absolute;
             top: 0;
-            line-height: 27px;
+            line-height: 32px;
+            color: darken($contact-form, 45%);
         }
         input {
             @extend .contact-fields;
@@ -255,4 +273,18 @@ $contact-close-position:    50px;
             }
         }
     }
+}
+
+/* Reset autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $contact-form;
+    transition: background-color 5000s ease-in-out 0s;
 }

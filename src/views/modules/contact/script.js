@@ -49,26 +49,68 @@ function createModuleStructure(json_url) {
 }
 
 /**
- * 
+ * After form is validated - email will be sent
  */
 function _sendEmail(event) {
     event.preventDefault();
 
-    console.log(event);
+    if ( _validateForm() ) {
+        var $form = $('#gform'),
+            parameters = '';
 
-    var $form = $('#gform');
+        $form.children('.contact__formItem').find(':input').each((index, field) => {
+            parameters += field.name +'='+ field.value +'&';
+        });
+        
+        $.ajax({
+            url: $form.attr('action'),
+            method: 'POST',
+            data: parameters,
+            success: (data) => {
+                console.log('message sent');
+            },
+            error: (data) => {
+                console.log('message failed to send');
+            }
+        });
+    }
+}
 
-    // $.ajax({
-    //     url: 'https://script.google.com/macros/s/AKfycbwZPL6ylly7c0pIh0gryIl8Jc4WbjcsM-rUB7wdSFocHwRlfs5U/exec',
-    //     method: 'POST',
-    //     data: 'name=Jaskio&message=testmessage&subject=subject&email=email@gmail.com',
-    //     success: (data) => {
-    //         console.log(data);
-    //     },
-    //     error: (data) => {
-    //         console.log(data);
-    //     }
-    // });
+/**
+ * Check fields and validate form
+ */
+function _validateForm() {
+    var email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        $form_fields = $('.contact__formItem'),
+        error_class = 'contact__formItem--error';
+
+    $form_fields.each((index, field) => {
+        var input = field.firstElementChild;
+
+        if (input.value === '') {
+            $(field).addClass(error_class);
+        } else {
+            $(field).removeClass(error_class);
+        }
+
+        if (input.name === 'email') {
+            !email_regex.test(input.value) ? $(field).addClass(error_class) : '';
+        }
+    });
+
+    return !$form_fields.hasClass(error_class);
+}
+
+/**
+ * Reseting all field values and css classes when form is closed
+ */
+function _resetFields() {
+    var $form_fields = $('.contact__formItem');
+
+    $form_fields.each((index, field) => {
+        field.firstElementChild.value = '';
+        $(field).removeClass('contact__formItem--error');
+    });
 }
 
 /**
@@ -82,10 +124,15 @@ function _showContactForm() {
     $('body').toggleClass('scrollbar--disable');
 }
 
+/**
+ * Helper function - remove css classes and reset all fields after form is closed
+ */
 function _closeContactForm() {
     $('.contact__formBlock--left').toggleClass('contact__formBlock--leftReset');  
     $('.contact__formBlock--right').toggleClass('contact__formBlock--rightReset'); 
     $('.contact__form').toggleClass('contact__form--visible');
     $('.contact__formCloseButton').toggleClass('contact__formCloseButton--active');
     $('body').toggleClass('scrollbar--disable');
+
+    _resetFields();
 }
