@@ -10,7 +10,7 @@ $contact-form-block:      #252a30;
 $contact-input-border:    #fff;
 $contact-form:            #fff;
 $contact-section-btn:     #fff;
-$contact-section-btn-bg:  #ff4400;
+$contact-section-btn-bg:  #ff5a1f;
 $contact-form-error:      #fd2828;
 
 
@@ -89,6 +89,7 @@ $contact-close-position:    50px;
     width: 200px;
     transition: all .3s;
     font-size: font-size(10px, '+');
+    border-radius: 2px;
     &:hover {
         span {
             padding-right: 25px;

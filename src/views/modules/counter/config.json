@@ -1,0 +1,26 @@
+{
+    "description": "..since my first 'Hello World' program",
+    "circles": [
+        {
+            "label": "years",
+            "color": "#776666"
+        },
+        {
+            "label": "days",
+            "color": "#3DA6E0"
+        },
+        {
+            "label": "hours",
+            "color": "#51D25E"
+        },
+        {
+            "label": "minutes",
+            "color": "#FD9816"
+        },
+        {
+            "label": "seconds",
+            "color": "#E64C40"
+        }
+    ],
+    "default_color": "#EBEAEF"
+}

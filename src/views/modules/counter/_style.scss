@@ -1,0 +1,87 @@
+/*
+######################
+    Colors
+######################
+*/
+$counter-bg:               #232e3e;
+$counter-default-border:   #EBEAEF;
+
+
+/*
+######################
+    Variables
+######################
+*/
+$counter-border-size:       6px;
+$counter-number-size:       font-size(30px, '+');
+
+
+/*
+######################
+    Style
+######################
+*/
+.module-counter {
+    background: $counter-bg;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - #{$counter-border-size} - #{$counter-border-size});
+    height: calc(100% - #{$counter-border-size} - #{$counter-border-size});
+    border-radius: 100%;
+    border: $counter-border-size solid;
+}
+
+.counter {
+    max-width: $max-content-width;
+    padding: $module-spacing 0;
+    margin: 0 auto;
+    &__circles {
+        text-align: center;
+    }
+    &__circle {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin: 0 10px;
+        display: inline-block;
+    }
+    &__circleDefault {
+        @extend .circle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__circleDefaultTitle {
+        display: inherit;
+        align-items: center;
+        flex-flow: column-reverse;
+        span {
+            &:nth-child(1) {
+                text-transform: uppercase;
+                font-size: 14px;
+                color: $counter-default-border;
+            }
+            &:nth-child(2) {
+                font-size: $counter-number-size;
+                line-height: $counter-number-size;
+            }
+        }
+    }
+    &__circleStart {
+        @extend .circle;
+    }
+    &__circleEnd {
+        @extend .circle;
+    }
+    &__description {
+        text-align: center;
+        margin-top: 40px;
+        font-size: font-size(2px, '+');
+        color: $counter-default-border;
+        font-family: $font-secondary-semibold;
+    }
+}

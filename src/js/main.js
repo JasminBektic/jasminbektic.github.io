@@ -4,7 +4,8 @@ var modules = '',
         'intro',
         'projects',
         'skills',
-        'contact'
+        'contact',
+        'counter'
     ],
     defined_partials = [
         'header',
