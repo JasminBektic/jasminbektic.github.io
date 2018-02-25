@@ -14,6 +14,8 @@ $counter-default-border:   #EBEAEF;
 */
 $counter-border-size:       6px;
 $counter-number-size:       font-size(30px, '+');
+$counter-circle-size:       160px;
+$counter-circle-space:      10px;
 
 
 /*
@@ -37,16 +39,16 @@ $counter-number-size:       font-size(30px, '+');
 
 .counter {
     max-width: $max-content-width;
-    padding: $module-spacing 0;
+    padding: $module-spacing 10px;
     margin: 0 auto;
     &__circles {
         text-align: center;
     }
     &__circle {
         position: relative;
-        width: 160px;
-        height: 160px;
-        margin: 0 10px;
+        width: $counter-circle-size;
+        height: $counter-circle-size;
+        margin: 0 $counter-circle-space;
         display: inline-block;
     }
     &__circleDefault {
@@ -83,5 +85,28 @@ $counter-number-size:       font-size(30px, '+');
         font-size: font-size(2px, '+');
         color: $counter-default-border;
         font-family: $font-secondary-semibold;
+    }
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-mid-tablet-width) {
+    .counter {
+        &__circles {
+            max-width: calc(#{$counter-circle-size * 3} + #{$counter-circle-space * 6});
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+    .counter {
+        &__circle:not(:last-child) {
+            margin-top: $counter-circle-space;
+        }
     }
 }

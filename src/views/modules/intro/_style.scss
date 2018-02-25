@@ -7,7 +7,7 @@ $intro-bg:              rgb(0, 0, 0);
 $intro:                 #fff;
 $profile-img-border:    #fff;
 $intro-title-init:      #fff;
-$intro-title:           #ff8f00;
+$intro-title:           #ff881f;
 $resume-btn:            #fff;
 $resume-btn-border:     #fff;
 $download-icon:         #fff;
@@ -139,6 +139,7 @@ $info-desc-size:        font-size(2px, '-');
         }
         to { 
             color: $intro-title;
+            text-shadow: darken($intro-title, 4%) 1px 0 2px;
         }
     }
 }
@@ -161,7 +162,7 @@ $info-desc-size:        font-size(2px, '-');
     &:hover span:nth-child(2) {
         opacity: .95;
     }
-    & span {
+    span {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -172,7 +173,7 @@ $info-desc-size:        font-size(2px, '-');
         justify-content: center;
         transition: .15s ease;
     }
-    & span:nth-child(2) {
+    span:nth-child(2) {
         top: 0;
         background: $download-icon-bg;
         color: $download-icon;
@@ -230,10 +231,6 @@ $info-desc-size:        font-size(2px, '-');
     Style
 ######################
 */
-.parallax-slider {
-    filter: blur(4px);
-}
-
 .particles {
     position: absolute;
     width: 100%;
@@ -255,9 +252,6 @@ $info-desc-size:        font-size(2px, '-');
     height: 100vh;
     display: flex;
     justify-content: center;
-    &Parallax {
-        background: rgba($intro-bg, .49);
-    }
     &__profile {    
         @extend .introItem;
         &--active {
@@ -270,7 +264,7 @@ $info-desc-size:        font-size(2px, '-');
         overflow: hidden;
         border-radius: 50%;
         @include border-rotation;
-        & img {
+        img {
             height: 100%;
             width: 100%;
             object-fit: cover;
@@ -288,7 +282,7 @@ $info-desc-size:        font-size(2px, '-');
     }
     &__infoTitle {
         font-size: $info-title-size;
-        font-family: $font-main-bold;
+        font-family: $font-main-medium;
         letter-spacing: 1px;
         @include title-change-color;
     }
@@ -332,6 +326,51 @@ $info-desc-size:        font-size(2px, '-');
         &--visibleOnScroll {
             opacity: 1;
             z-index: 100;
+        }
+    }
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-mid-tablet-width) {
+    .intro {
+        &__profileImage {
+            width: calc(#{$profile-img-size} - 80px);
+            height: calc(#{$profile-img-size} - 80px);
+        }
+    }
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+    .intro {
+        flex-flow: column;
+        align-items: center;
+        padding: 15px 0;
+        &__profile {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        &__info {
+            padding-right: 0;
+        }
+        &__infoSummary {
+            margin-top: 20px;
+        }
+        &__scrollDownButton {
+            right: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+    .intro {
+        &__info {
+            width: 100%;
+            padding: 0 15%;
         }
     }
 }

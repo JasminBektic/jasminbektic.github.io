@@ -55,6 +55,7 @@ $skills-heading:        #2b2b2b;
     &__title {
         text-align: center;
         margin-bottom: 50px;
+        padding: 0 10px;
         & h2 {
             color: $skills-heading;
             font-family: $font-secondary-bold;
@@ -104,6 +105,40 @@ $skills-heading:        #2b2b2b;
             padding: 3px 8px;
             border-radius: 3px;
             color: $skills-item-hover;
+        }
+    }
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-mid-tablet-width) {
+    .skills {
+        &__grid {
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 4%;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+    .skills {
+        &__title {
+            margin-bottom: 36px;
+        }
+        &__grid {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+    .skills {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

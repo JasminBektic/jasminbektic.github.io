@@ -78,3 +78,27 @@ $header-height:         50px;
         }
     }
 }
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-desktop-width) {
+
+}
+
+@media only screen and (max-width: $site-mid-tablet-width) {
+    .header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+
+}

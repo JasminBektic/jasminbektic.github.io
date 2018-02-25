@@ -11,7 +11,7 @@ $contact-input-border:    #fff;
 $contact-form:            #fff;
 $contact-section-btn:     #fff;
 $contact-section-btn-bg:  #ff5a1f;
-$contact-form-error:      #fd2828;
+$contact-form-error:      #ff4545;
 
 
 /*
@@ -151,6 +151,7 @@ $contact-close-position:    50px;
     margin: 0 auto;
     &__section {
         text-align: center;
+        padding: 0 10px;
         h2 {
             color: $contact-heading;
             font-family: $font-secondary-bold;
@@ -174,17 +175,25 @@ $contact-close-position:    50px;
             align-items: center;
             top: 50%;
             left: 50%;
-            position: fixed;
+            position: absolute;
             opacity: 0;
             z-index: 61;
             pointer-events: none;
             transition: .3s ease-out;
             transform: translateX(-50%) translateY(-50%);
-            width: 40%;
+            width: 100%;
             color: $contact-form;
+            margin: 10px 0;
         }
     }
     &__form--visible {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        z-index: 63;
         form {
             transition-delay: .5s;
             pointer-events: auto;
@@ -193,9 +202,10 @@ $contact-close-position:    50px;
     }
     &__formTitle {
         font-size: font-size(4px, '+');
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-family: $font-secondary-semibold;
         text-align: center;
+        padding: 0 10px;
     }
     &__formItem {
         display: flex;
@@ -288,4 +298,41 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     -webkit-text-fill-color: $contact-form;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-tablet-width) {
+    .contact {
+        &__form {
+            form {
+                margin: 30px 0;
+            }
+        }
+        &__formTitle {
+            max-width: 400px;
+        }
+        &__formCloseButton {
+            top: calc(#{$contact-close-position} - 40px);
+            right: calc(#{$contact-close-position} - 40px);
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+    .contact {
+        &__form {
+            form {
+                margin: 70px 0 30px;
+            }
+        }
+        &__formItem {
+            max-width: none;
+            width: 90%;
+        }
+    }
 }

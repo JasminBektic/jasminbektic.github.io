@@ -121,7 +121,7 @@ function _showContactForm() {
     $('.contact__formBlock--right').toggleClass('contact__formBlock--rightReset'); 
     $('.contact__form').toggleClass('contact__form--visible');
     $('.contact__formCloseButton').toggleClass('contact__formCloseButton--active');
-    $('body').toggleClass('scrollbar--disable');
+    $('html,body').toggleClass('scrollbar--disable');
 }
 
 /**
@@ -132,7 +132,7 @@ function _closeContactForm() {
     $('.contact__formBlock--right').toggleClass('contact__formBlock--rightReset'); 
     $('.contact__form').toggleClass('contact__form--visible');
     $('.contact__formCloseButton').toggleClass('contact__formCloseButton--active');
-    $('body').toggleClass('scrollbar--disable');
+    $('html,body').toggleClass('scrollbar--disable');
 
     _resetFields();
 }

@@ -61,6 +61,7 @@ $projects-heading:              #2b2b2b;
     &__title {
         text-align: center;
         margin-bottom: 50px;
+        padding: 0 10px;
         & h2 {
             color: $projects-heading;
             font-family: $font-secondary-bold;
@@ -174,6 +175,38 @@ $projects-heading:              #2b2b2b;
         transition: .25s ease;
         & span {
             @extend .project-overlay-tag;
+        }
+    }
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-tablet-width) {
+    .projects {
+        &__title {
+            margin-bottom: 36px;
+        }
+        &__grid {
+            grid-auto-rows: minmax(250px, auto);
+            grid-column-gap: 20px;
+            grid-row-gap: 30px;
+            padding: 0 20px;
+        }
+        &__gridItemTitle {
+            padding-left: 10px;
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+    .projects {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
