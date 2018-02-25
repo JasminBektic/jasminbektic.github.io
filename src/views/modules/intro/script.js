@@ -27,7 +27,7 @@ function createModuleStructure(json_url) {
                                      '<div class="intro__infoResume">'+
                                          '<a href="' +data.pdf+ '" target="_blank">'+
                                              '<span>' +data.resume+ '</span>'+
-                                             '<span><i class="far fa-file-pdf"></i></span>'+
+                                             '<span>' +data.download+ '<i class="far fa-file-pdf"></i></span>'+
                                          '</a>'+
                                      '</div>');
 

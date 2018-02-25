@@ -3,6 +3,19 @@
     "projects_desc": "Everything accomplished in free time.",
     "grid": [
         {
+            "title": "This.page",
+            "url": "https://github.com/JasminBektic/jasminbektic.github.io",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/angular.png",
+            "tags": [
+                "Animations",
+                "Responsive",
+                "Jquery",
+                "Sass"
+            ],
+            "button": "more..."
+        },
+        {
             "title": "Example_01",
             "url": "https://github.com/JasminBektic",
             "corner_tag": "GitHub",

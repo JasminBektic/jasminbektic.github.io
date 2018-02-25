@@ -1,8 +1,9 @@
 {
     "profile_img": "assets/images/profile.jpg",
     "title": "Jasmin Bektic",
-    "title_desc": "FullStack Developer • Drummer",
-    "summary": "Powerful and motivational message here.",
-    "pdf": "assets/test.pdf",
-    "resume": "Resume"
+    "title_desc": "Web Developer • Drummer",
+    "summary": "I am passionate Web Developer who work comfortably between both front-end and back-end environments.",
+    "pdf": "assets/cv_test.pdf",
+    "resume": "Resume",
+    "download": "Download"
 }

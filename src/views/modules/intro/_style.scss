@@ -11,7 +11,7 @@ $intro-title:           #ff881f;
 $resume-btn:            #fff;
 $resume-btn-border:     #fff;
 $download-icon:         #fff;
-$download-icon-bg:      #ff6c00;
+$download-icon-bg:      #FF851B;
 $typewriter:            #ff9817;
 $scroll-down-btn:       #fff;
 
@@ -160,7 +160,7 @@ $info-desc-size:        font-size(2px, '-');
     height: 30px;
     border: 2px solid transparent;
     &:hover span:nth-child(2) {
-        opacity: .95;
+        opacity: 1;
     }
     span {
         position: absolute;
@@ -171,14 +171,20 @@ $info-desc-size:        font-size(2px, '-');
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .15s ease;
+        transition: .1s ease-out;
+    }
+    span:nth-child(1) {
+        text-transform: uppercase;
     }
     span:nth-child(2) {
         top: 0;
         background: $download-icon-bg;
         color: $download-icon;
-        font-size: 20px;
+        letter-spacing: 1px;
         opacity: 0;
+    }
+    i {
+        padding-left: 10px;
     }
 }
 
@@ -249,7 +255,7 @@ $info-desc-size:        font-size(2px, '-');
 }
 
 .intro {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     &__profile {    
@@ -306,9 +312,6 @@ $info-desc-size:        font-size(2px, '-');
             letter-spacing: 2px;
             @include resume-btn;
             @include resume-btn-border;
-            span {
-                text-transform: uppercase;
-            }
         }
     }
     &__scrollDownButton {
@@ -349,7 +352,8 @@ $info-desc-size:        font-size(2px, '-');
     .intro {
         flex-flow: column;
         align-items: center;
-        padding: 15px 0;
+        padding: 10px 0;
+        position: relative;
         &__profile {
             margin-bottom: 10px;
             width: 100%;
@@ -362,6 +366,7 @@ $info-desc-size:        font-size(2px, '-');
         }
         &__scrollDownButton {
             right: 40px;
+            bottom: 50%;
         }
     }
 }
@@ -371,6 +376,9 @@ $info-desc-size:        font-size(2px, '-');
         &__info {
             width: 100%;
             padding: 0 15%;
+        }
+        &__scrollDownButton {
+            right: 25px;
         }
     }
 }

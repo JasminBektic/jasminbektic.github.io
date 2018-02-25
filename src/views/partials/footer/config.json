@@ -2,22 +2,22 @@
     "social_icons": [
         {
             "fa_class": "fab fa-linkedin-in",
-            "url": "",
+            "url": "https://linkedin.com/in/jasmin-bektic",
             "color": "#0077b5"
         },
         {
             "fa_class": "fab fa-github",
-            "url": "",
+            "url": "https://github.com/JasminBektic",
             "color": "#4f4f4f"
         },
         {
             "fa_class": "fab fa-facebook-f",
-            "url": "",
+            "url": "https://www.facebook.com/jasmin.bektic.31",
             "color": "#4868ad"
         },
         {
             "fa_class": "fab fa-google-plus-g",
-            "url": "",
+            "url": "https://plus.google.com/108317542292531525574",
             "color": "#de4b39"
         }
     ]

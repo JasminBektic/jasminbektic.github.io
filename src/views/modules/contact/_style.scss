@@ -160,6 +160,7 @@ $contact-close-position:    50px;
         p {
             color: lighten($contact-heading, 12%);
             font-size: font-size(4px, '+');
+            padding: 0 25%;
         }
     }
     &__sectionButton {
@@ -173,14 +174,13 @@ $contact-close-position:    50px;
             display: flex;
             flex-flow: column;
             align-items: center;
-            top: 50%;
-            left: 50%;
+            justify-content: center;
+            top: 20px;
             position: absolute;
             opacity: 0;
             z-index: 61;
             pointer-events: none;
             transition: .3s ease-out;
-            transform: translateX(-50%) translateY(-50%);
             width: 100%;
             color: $contact-form;
             margin: 10px 0;
@@ -306,19 +306,32 @@ select:-webkit-autofill:focus {
     Responsive
 ######################
 */
-@media only screen and (max-width: $site-tablet-width) {
+@media only screen and (max-width: $site-mid-tablet-width) {
     .contact {
         &__form {
             form {
                 margin: 30px 0;
             }
         }
+    }
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+    .contact {
         &__formTitle {
             max-width: 400px;
         }
         &__formCloseButton {
             top: calc(#{$contact-close-position} - 40px);
             right: calc(#{$contact-close-position} - 40px);
+            &--active {
+                position: absolute;
+            }
+        }
+        &__section {
+            p {
+                padding: 0 10px;
+            }
         }
     }
 }
@@ -327,7 +340,7 @@ select:-webkit-autofill:focus {
     .contact {
         &__form {
             form {
-                margin: 70px 0 30px;
+                margin: 50px 0 30px;
             }
         }
         &__formItem {

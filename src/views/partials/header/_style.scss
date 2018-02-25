@@ -65,6 +65,7 @@ $header-height:         50px;
                 position: relative;
                 display: inline-block;
                 transition: transform .4s;
+                font-size: font-size(1px, '+');
                 &:before {
                     position: absolute;
                     top: 100%;

@@ -10,7 +10,7 @@ function createPartialStructure(json_url) {
 
             $.each(data.social_icons, (index, icon) => {
                 elements += '<li>'+
-                                '<a href="' +icon.url+ '">'+
+                                '<a href="' +icon.url+ '" target="blank">'+
                                     '<i class="' +icon.fa_class+ '" style=background:' +icon.color+ '></i>'+
                                 '</a>'+
                             '</li>';
