@@ -1,57 +1,72 @@
 {
     "title": "Code Laboratory",
-    "projects_desc": "Everything accomplished in free time.",
+    "projects_desc": "Everything accomplished in free time",
     "grid": [
         {
             "title": "This.page",
             "url": "https://github.com/JasminBektic/jasminbektic.github.io",
             "corner_tag": "GitHub",
-            "background": "assets/images/projects/angular.png",
+            "background": "assets/images/projects/portfolio.jpg",
             "tags": [
-                "Animations",
-                "Responsive",
-                "Jquery",
-                "Sass"
+                "sass",
+                "bem",
+                "animations",
+                "responsive design",
+                "jquery",
+                "dom manipulation"
             ],
             "button": "more..."
         },
         {
-            "title": "Example_01",
-            "url": "https://github.com/JasminBektic",
+            "title": "advertiser",
+            "url": "https://github.com/JasminBektic/advertiser",
             "corner_tag": "GitHub",
-            "background": "assets/images/projects/angular.png",
+            "background": "assets/images/projects/advertiser.jpg",
             "tags": [
-                "AngularJS",
-                "JSON",
-                "Jquery"
+                "webapp",
+                "laravel",
+                "php",
+                "blade templating",
+                "oop"
             ],
             "button": "more..."
         },
         {
-            "title": "Example_02",
-            "url": "https://github.com/JasminBektic",
+            "title": "phonebook",
+            "url": "https://github.com/JasminBektic/phonebook",
             "corner_tag": "GitHub",
-            "background": "assets/images/projects/angular.png",
+            "background": "assets/images/projects/phonebook.jpg",
             "tags": [
-                "Laravel",
-                "PHP",
-                "Jquery",
-                "Sass",
-                "Javascript",
-                "Blade"
+                "javascript",
+                "angularjs",
+                "spa",
+                "nodejs",
+                "bootstrap"
             ],
             "button": "more..."
         },
         {
-            "title": "Example_03",
-            "url": "https://github.com/JasminBektic",
+            "title": "landing page",
+            "url": "https://github.com/JasminBektic/landing_page",
             "corner_tag": "GitHub",
-            "background": "assets/images/projects/angular.png",
+            "background": "assets/images/projects/landing_page.jpg",
             "tags": [
-                "Jquery",
-                "Sass",
-                "Javascript",
-                "BEM"
+                "sass",
+                "javascript",
+                "ajax",
+                "responsive design",
+                "cross-browser compatibility"
+            ],
+            "button": "more..."
+        },
+        {
+            "title": "project automation",
+            "url": "https://github.com/JasminBektic/project-automation-tools",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/project_automation.jpg",
+            "tags": [
+                "bash",
+                "process automation"
             ],
             "button": "more..."
         }

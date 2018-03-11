@@ -28,7 +28,7 @@ $projects-heading:              #2b2b2b;
     $add-delay: .06;
     $increase-step-by: .06;
 
-    @for $i from 1 through 15 {
+    @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
             transition-delay: calc(#{$init-delay} + #{$add-delay}s );
         }
@@ -89,11 +89,11 @@ $projects-heading:              #2b2b2b;
         &:hover &ImageOverlay {
             bottom: 0;
             &Tags span {
-                @include tag-delay(.38s);
+                @include tag-delay(.28s);
                 transform: rotateX(0deg);
             }
             &Button {
-                transition-delay: 1s;
+                transition-delay: .8s;
                 bottom: 25px;
             }
         }
@@ -128,7 +128,8 @@ $projects-heading:              #2b2b2b;
         & img {
             height: 100%;
             width: 100%;
-            object-fit: contain
+            object-fit: cover;
+            object-position: center 22px;
         }
     }
     &__gridItemImageOverlay {
