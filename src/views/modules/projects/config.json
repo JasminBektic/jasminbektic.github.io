@@ -60,6 +60,19 @@
             "button": "more..."
         },
         {
+            "title": "chat app",
+            "url": "https://github.com/JasminBektic/chat-app",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/chat_app.jpg",
+            "tags": [
+                "php",
+                "oop",
+                "websockets",
+                "project structure"
+            ],
+            "button": "more..."
+        },
+        {
             "title": "project automation",
             "url": "https://github.com/JasminBektic/project-automation-tools",
             "corner_tag": "GitHub",
