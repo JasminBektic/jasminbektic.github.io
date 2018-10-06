@@ -7,7 +7,7 @@ $intro-bg:              rgb(0, 0, 0);
 $intro:                 #fff;
 $profile-img-border:    #fff;
 $intro-title-init:      #fff;
-$intro-title:           #ff881f;
+$intro-title:           #fb9d4a;
 $resume-btn:            #fff;
 $resume-btn-border:     #fff;
 $download-icon:         #2c2c2c;
@@ -180,7 +180,7 @@ $info-desc-size:        font-size(2px, '-');
         top: 0;
         background: $download-icon-bg;
         color: $download-icon;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         opacity: 0;
     }
     i {

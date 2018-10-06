@@ -18,6 +18,21 @@
             "button": "more..."
         },
         {
+            "title": "express starter",
+            "url": "https://github.com/JasminBektic/express-typescript-mongoose-starter",
+            "corner_tag": "GitHub",
+            "background": "assets/images/projects/express_ts_mongoose.png",
+            "tags": [
+                "nodejs",
+                "express",
+                "typescript",
+                "mongodb",
+                "mongoose",
+                "pug"
+            ],
+            "button": "more..."
+        },
+        {
             "title": "advertiser",
             "url": "https://github.com/JasminBektic/advertiser",
             "corner_tag": "GitHub",
@@ -26,8 +41,7 @@
                 "webapp",
                 "laravel",
                 "php",
-                "blade templating",
-                "oop"
+                "blade templating"
             ],
             "button": "more..."
         },
@@ -46,29 +60,13 @@
             "button": "more..."
         },
         {
-            "title": "landing page",
-            "url": "https://github.com/JasminBektic/landing_page",
-            "corner_tag": "GitHub",
-            "background": "assets/images/projects/landing_page.jpg",
-            "tags": [
-                "sass",
-                "javascript",
-                "ajax",
-                "responsive design",
-                "cross-browser compatibility"
-            ],
-            "button": "more..."
-        },
-        {
             "title": "chat app",
             "url": "https://github.com/JasminBektic/chat-app",
             "corner_tag": "GitHub",
             "background": "assets/images/projects/chat_app.jpg",
             "tags": [
                 "php",
-                "oop",
-                "websockets",
-                "project structure"
+                "websockets"
             ],
             "button": "more..."
         },

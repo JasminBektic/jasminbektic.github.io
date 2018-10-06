@@ -18,21 +18,6 @@
             "title_bg": "#D5BA33"
         },
         {
-            "background": "assets/images/skills/jquery.svg",
-            "title": "jQuery",
-            "title_bg": "#4082AE"
-        },
-        {
-            "background": "assets/images/skills/angular.svg",
-            "title": "AngularJS",
-            "title_bg": "#E23237"
-        },
-        {
-            "background": "assets/images/skills/sass.svg",
-            "title": "Sass",
-            "title_bg": "#CF649A"
-        },
-        {
             "background": "assets/images/skills/php.svg",
             "title": "PHP",
             "title_bg": "#8993BE"
@@ -43,19 +28,34 @@
             "title_bg": "#FB503B"
         },
         {
-            "background": "assets/images/skills/wordpress.svg",
-            "title": "Wordpress",
-            "title_bg": "#464442"
+            "background": "assets/images/skills/jquery.svg",
+            "title": "jQuery",
+            "title_bg": "#4082AE"
         },
         {
-            "background": "assets/images/skills/java.svg",
-            "title": "Java",
-            "title_bg": "#5382A1"
+            "background": "assets/images/skills/angular.svg",
+            "title": "AngularJS",
+            "title_bg": "#E23237"
         },
         {
-            "background": "assets/images/skills/git.svg",
-            "title": "Git",
-            "title_bg": "#F05133"
+            "background": "assets/images/skills/nodejs.svg",
+            "title": "NodeJS",
+            "title_bg": "#343434"
+        },
+        {
+            "background": "assets/images/skills/express.png",
+            "title": "ExpressJS",
+            "title_bg": "#4E4E4E"
+        },
+        {
+            "background": "assets/images/skills/typescript.svg",
+            "title": "Typescript",
+            "title_bg": "#355ACF"
+        },
+        {
+            "background": "assets/images/skills/mongodb.png",
+            "title": "MongoDB",
+            "title_bg": "#47A639"
         },
         {
             "background": "assets/images/skills/mysql.svg",
@@ -63,9 +63,19 @@
             "title_bg": "#008CDB"
         },
         {
-            "background": "assets/images/skills/bem.svg",
-            "title": "BEM",
-            "title_bg": "#010101"
+            "background": "assets/images/skills/python.svg",
+            "title": "Python",
+            "title_bg": "#496EB9"
+        },
+        {
+            "background": "assets/images/skills/wordpress.svg",
+            "title": "Wordpress",
+            "title_bg": "#464442"
+        },
+        {
+            "background": "assets/images/skills/sass.svg",
+            "title": "Sass",
+            "title_bg": "#CF649A"
         },
         {
             "background": "assets/images/skills/bootstrap.svg",
@@ -76,6 +86,16 @@
             "background": "assets/images/skills/bash.svg",
             "title": "Bash",
             "title_bg": "#3E474A"
+        },
+        {
+            "background": "assets/images/skills/git.svg",
+            "title": "Git",
+            "title_bg": "#F05133"
+        },
+        {
+            "background": "assets/images/skills/webpack.svg",
+            "title": "Webpack",
+            "title_bg": "#7B82DC"
         },
         {
             "background": "assets/images/skills/gulp.svg",
