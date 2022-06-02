@@ -3,21 +3,6 @@
     "skills_desc": "List of skills that I am familiar with",
     "grid": [
         {
-            "background": "assets/images/skills/html.svg",
-            "title": "HTML",
-            "title_bg": "#E34F26"
-        },
-        {
-            "background": "assets/images/skills/css.svg",
-            "title": "CSS",
-            "title_bg": "#0A71B9"
-        },
-        {
-            "background": "assets/images/skills/javascript.svg",
-            "title": "JavaScript",
-            "title_bg": "#D5BA33"
-        },
-        {
             "background": "assets/images/skills/php.svg",
             "title": "PHP",
             "title_bg": "#8993BE"
@@ -28,14 +13,59 @@
             "title_bg": "#FB503B"
         },
         {
+            "background": "assets/images/skills/symfony.png",
+            "title": "Symfony",
+            "title_bg": "#000000"
+        },
+        {
+            "background": "assets/images/skills/mysql.svg",
+            "title": "MySQL",
+            "title_bg": "#008CDB"
+        },
+        {
+            "background": "assets/images/skills/docker.png",
+            "title": "Docker",
+            "title_bg": "#2696ED"
+        },
+        {
+            "background": "assets/images/skills/elasticsearch.png",
+            "title": "ElasticSearch",
+            "title_bg": "#5CBEAF"
+        },
+        {
+            "background": "assets/images/skills/rabbitmq.png",
+            "title": "RabbitMQ",
+            "title_bg": "#EC632E"
+        },
+        {
+            "background": "assets/images/skills/kibana.png",
+            "title": "Kibana",
+            "title_bg": "#4FA696"
+        },
+        {
+            "background": "assets/images/skills/javascript.svg",
+            "title": "JavaScript",
+            "title_bg": "#D5BA33"
+        },
+        {
             "background": "assets/images/skills/jquery.svg",
             "title": "jQuery",
             "title_bg": "#4082AE"
         },
         {
-            "background": "assets/images/skills/angular.svg",
-            "title": "AngularJS",
-            "title_bg": "#E23237"
+            "background": "assets/images/skills/html.svg",
+            "title": "HTML",
+            "title_bg": "#E34F26"
+        },
+        {
+            "background": "assets/images/skills/css.svg",
+            "title": "CSS",
+            "title_bg": "#0A71B9"
+        },
+        {
+            "background": "assets/images/skills/bootstrap.svg",
+            "title": "Bootstrap",
+            "title_bg": "#563D7C"
         },
         {
             "background": "assets/images/skills/nodejs.svg",
@@ -50,17 +80,12 @@
         {
             "background": "assets/images/skills/typescript.svg",
             "title": "Typescript",
-            "title_bg": "#355ACF"
+            "title_bg": "#157ACC"
         },
         {
             "background": "assets/images/skills/mongodb.png",
             "title": "MongoDB",
             "title_bg": "#47A639"
-        },
-        {
-            "background": "assets/images/skills/mysql.svg",
-            "title": "MySQL",
-            "title_bg": "#008CDB"
         },
         {
             "background": "assets/images/skills/python.svg",
@@ -73,14 +98,24 @@
             "title_bg": "#464442"
         },
         {
-            "background": "assets/images/skills/sass.svg",
-            "title": "Sass",
-            "title_bg": "#CF649A"
+            "background": "assets/images/skills/magento.svg",
+            "title": "Magento",
+            "title_bg": "#EC612F"
         },
         {
-            "background": "assets/images/skills/bootstrap.svg",
-            "title": "Bootstrap",
-            "title_bg": "#563D7C"
+            "background": "assets/images/skills/shopware.png",
+            "title": "Shopware",
+            "title_bg": "#1E86D8"
+        },
+        {
+            "background": "assets/images/skills/pimcore.png",
+            "title": "Pimcore",
+            "title_bg": "#624299"
+        },
+        {
+            "background": "assets/images/skills/linux.png",
+            "title": "Linux",
+            "title_bg": "#000000"
         },
         {
             "background": "assets/images/skills/bash.svg",
@@ -91,16 +126,6 @@
             "background": "assets/images/skills/git.svg",
             "title": "Git",
             "title_bg": "#F05133"
-        },
-        {
-            "background": "assets/images/skills/webpack.svg",
-            "title": "Webpack",
-            "title_bg": "#7B82DC"
-        },
-        {
-            "background": "assets/images/skills/gulp.svg",
-            "title": "Gulp",
-            "title_bg": "#E94B4C"
         }
     ]
 }

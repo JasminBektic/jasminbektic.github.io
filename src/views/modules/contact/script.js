@@ -20,30 +20,39 @@ function createModuleStructure(json_url) {
                                       .append($('<button>').attr('id', 'contact-modal')
                                           .append($('<span>').text(data.button))));
 
+            // Temporary disabled email form //
             $('.contact__form').append($('<div>').addClass('contact__formBlock contact__formBlock--left'))
-                               .append($('<div>').addClass('contact__formBlock contact__formBlock--right'))
-                               .append($('<div>').addClass('contact__formCloseButton')
-                                    .append($('<button>').attr('id', 'contact-close-btn')))
-                               .append($('<form>').attr({
-                                                            id: 'gform',
-                                                            method: 'POST',
-                                                            action: data.form_action})
-                                    .append($('<div>').addClass('contact__formSubmitButton')
-                                        .append($('<button>').attr({
-                                                                        id: 'contact-submit-btn',
-                                                                        type: 'submit'})
-                                                             .text(data.submit_btn)))
-                                    .prepend(() => {
-                                        var fields = '';
-                                        data.fields.forEach((field) => {
-                                            fields += '<fieldset class="contact__formItem"> \
-                                                            <' +field.type+ ' placeholder="&nbsp;" name="' +field.name+ '">' +(field.type !== "input" ? "</"+field.type+">" : "")+ ' \
-                                                            <label for="' +field.name+ '">' +field.label+ '</label> \
-                                                       </fieldset>';
-                                        })
-                                        return fields;
-                                    })
-                                    .prepend($('<div>').addClass('contact__formTitle').text(data.form_title)));
+                                .append($('<div>').addClass('contact__formBlock contact__formBlock--right'))
+                                .append($('<div>').addClass('contact__formCloseButton')
+                                .append($('<button>').attr('id', 'contact-close-btn')))
+                                    .append($('<form>')
+                                    .prepend($('<div>').addClass('contact__formTitle').text('Feel free to reach out via email: jasminbektic.dev@gmail.com').css({"margin-top": "14%"})));
+            // Temporary disabled email form //
+
+            // $('.contact__form').append($('<div>').addClass('contact__formBlock contact__formBlock--left'))
+            //                    .append($('<div>').addClass('contact__formBlock contact__formBlock--right'))
+            //                    .append($('<div>').addClass('contact__formCloseButton')
+            //                         .append($('<button>').attr('id', 'contact-close-btn')))
+            //                    .append($('<form>').attr({
+            //                                                 id: 'gform',
+            //                                                 method: 'POST',
+            //                                                 action: data.form_action})
+            //                         .append($('<div>').addClass('contact__formSubmitButton')
+            //                             .append($('<button>').attr({
+            //                                                             id: 'contact-submit-btn',
+            //                                                             type: 'submit'})
+            //                                                  .text(data.submit_btn)))
+            //                         .prepend(() => {
+            //                             var fields = '';
+            //                             data.fields.forEach((field) => {
+            //                                 fields += '<fieldset class="contact__formItem"> \
+            //                                                 <' +field.type+ ' placeholder="&nbsp;" name="' +field.name+ '">' +(field.type !== "input" ? "</"+field.type+">" : "")+ ' \
+            //                                                 <label for="' +field.name+ '">' +field.label+ '</label> \
+            //                                            </fieldset>';
+            //                             })
+            //                             return fields;
+            //                         })
+            //                         .prepend($('<div>').addClass('contact__formTitle').text(data.form_title)));
         }
     });
 }
